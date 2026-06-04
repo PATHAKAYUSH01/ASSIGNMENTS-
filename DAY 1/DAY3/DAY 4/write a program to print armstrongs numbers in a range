@@ -1,0 +1,15 @@
+start = int(input("Enter start of range: "))
+end = int(input("Enter end of range: "))
+
+print("Armstrong numbers are:")
+
+for num in range(start, end + 1):
+    digits = str(num)
+    power = len(digits)
+    total = 0
+
+    for digit in digits:
+        total += int(digit) ** power
+
+    if total == num:
+        print(num)
