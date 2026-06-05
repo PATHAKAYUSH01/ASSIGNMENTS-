@@ -1,0 +1,16 @@
+number = int(input("Enter a number: "))
+
+largest_factor = 1
+divisor = 2
+
+while divisor * divisor <= number:
+    while number % divisor == 0:
+        largest_factor = divisor
+        number //= divisor
+
+    divisor += 1
+
+if number > 1:
+    largest_factor = number
+
+print("Largest prime factor is:", largest_factor)
