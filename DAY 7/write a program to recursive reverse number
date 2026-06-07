@@ -1,0 +1,16 @@
+def reverse_number(n, reversed_num=0):
+    n = abs(n)
+
+    if n == 0:
+        return reversed_num
+
+    return reverse_number(n // 10, reversed_num * 10 + n % 10)
+
+
+num = int(input("Enter a number: "))
+result = reverse_number(num)
+
+if num < 0:
+    result = -result
+
+print("Reverse of", num, "is", result)
