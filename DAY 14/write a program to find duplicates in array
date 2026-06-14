@@ -1,0 +1,15 @@
+# Find Duplicates in an Array
+
+arr = list(map(int, input("Enter elements: ").split()))
+
+duplicates = set()
+
+for i in range(len(arr)):
+    for j in range(i + 1, len(arr)):
+        if arr[i] == arr[j]:
+            duplicates.add(arr[i])
+
+if duplicates:
+    print("Duplicate elements are:", list(duplicates))
+else:
+    print("No duplicate elements found")
