@@ -1,0 +1,8 @@
+arr = [1, 2, 3, 4, 5]
+k = 2
+
+k = k % len(arr)
+rotated_arr = arr[k:] + arr[:k]
+
+print("Original array:", arr)
+print("Left rotated array:", rotated_arr)
