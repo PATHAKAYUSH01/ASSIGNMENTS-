@@ -1,0 +1,56 @@
+score = 0
+
+print("=== Python Quiz ===")
+
+print("\nQ1. What is the capital of India?")
+print("A. Mumbai")
+print("B. Delhi")
+print("C. Chennai")
+print("D. Kolkata")
+
+ans = input("Enter your answer (A/B/C/D): ").upper()
+if ans == "B":
+    score += 1
+
+print("\nQ2. Which keyword is used to define a function in Python?")
+print("A. function")
+print("B. define")
+print("C. def")
+print("D. fun")
+
+ans = input("Enter your answer (A/B/C/D): ").upper()
+if ans == "C":
+    score += 1
+
+print("\nQ3. Which data type stores whole numbers?")
+print("A. float")
+print("B. int")
+print("C. str")
+print("D. list")
+
+ans = input("Enter your answer (A/B/C/D): ").upper()
+if ans == "B":
+    score += 1
+
+print("\nQ4. Which loop is used for fixed iterations?")
+print("A. while")
+print("B. do while")
+print("C. for")
+print("D. repeat")
+
+ans = input("Enter your answer (A/B/C/D): ").upper()
+if ans == "C":
+    score += 1
+
+print("\nQ5. Which symbol is used for comments in Python?")
+print("A. //")
+print("B. <!-- -->")
+print("C. #")
+print("D. **")
+
+ans = input("Enter your answer (A/B/C/D): ").upper()
+if ans == "C":
+    score += 1
+
+print("\nQuiz Completed!")
+print("Your Score:", score, "/5")
