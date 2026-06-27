@@ -1,0 +1,27 @@
+while True:
+    print("\n===== Salary Management System =====")
+
+    emp_name = input("Enter Employee Name: ")
+    basic = float(input("Enter Basic Salary: "))
+    hra = float(input("Enter HRA: "))
+    da = float(input("Enter DA: "))
+    ta = float(input("Enter TA: "))
+    pf = float(input("Enter PF Deduction: "))
+
+    gross = basic + hra + da + ta
+    net = gross - pf
+
+    print("\n------ Salary Slip ------")
+    print("Employee Name :", emp_name)
+    print("Basic Salary  :", basic)
+    print("HRA           :", hra)
+    print("DA            :", da)
+    print("TA            :", ta)
+    print("Gross Salary  :", gross)
+    print("PF Deduction  :", pf)
+    print("Net Salary    :", net)
+
+    ch = input("\nDo you want to calculate another salary? (y/n): ")
+    if ch.lower() != 'y':
+        print("Thank You!")
+        break

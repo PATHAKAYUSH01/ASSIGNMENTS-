@@ -1,0 +1,66 @@
+employees = {}
+
+while True:
+    print("\n===== Employee Management System =====")
+    print("1. Add Employee")
+    print("2. View Employees")
+    print("3. Search Employee")
+    print("4. Update Employee")
+    print("5. Delete Employee")
+    print("6. Exit")
+
+    choice = input("Enter Choice: ")
+
+    if choice == "1":
+        emp_id = input("Enter Employee ID: ")
+        name = input("Enter Name: ")
+        dept = input("Enter Department: ")
+        salary = input("Enter Salary: ")
+
+        employees[emp_id] = {
+            "Name": name,
+            "Department": dept,
+            "Salary": salary
+        }
+        print("Employee Added Successfully!")
+
+    elif choice == "2":
+        if employees:
+            for emp_id, details in employees.items():
+                print("\nEmployee ID:", emp_id)
+                for key, value in details.items():
+                    print(f"{key}: {value}")
+        else:
+            print("No Employee Records!")
+
+    elif choice == "3":
+        emp_id = input("Enter Employee ID: ")
+        if emp_id in employees:
+            print(employees[emp_id])
+        else:
+            print("Employee Not Found!")
+
+    elif choice == "4":
+        emp_id = input("Enter Employee ID: ")
+        if emp_id in employees:
+            employees[emp_id]["Name"] = input("Enter New Name: ")
+            employees[emp_id]["Department"] = input("Enter Department: ")
+            employees[emp_id]["Salary"] = input("Enter Salary: ")
+            print("Record Updated!")
+        else:
+            print("Employee Not Found!")
+
+    elif choice == "5":
+        emp_id = input("Enter Employee ID: ")
+        if emp_id in employees:
+            del employees[emp_id]
+            print("Employee Deleted!")
+        else:
+            print("Employee Not Found!")
+
+    elif choice == "6":
+        print("Thank You!")
+        break
+
+    else:
+        print("Invalid Choice!")
