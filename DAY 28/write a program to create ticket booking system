@@ -1,0 +1,38 @@
+class TicketBooking:
+    def __init__(self):
+        self.total_seats = 10
+
+    def book_ticket(self):
+        if self.total_seats > 0:
+            name = input("Enter passenger name: ")
+            self.total_seats -= 1
+            print(f"Ticket booked for {name}.")
+            print("Seats left:", self.total_seats)
+        else:
+            print("No seats available.")
+
+    def cancel_ticket(self):
+        self.total_seats += 1
+        print("Ticket cancelled.")
+        print("Seats available:", self.total_seats)
+
+    def available_seats(self):
+        print("Available Seats:", self.total_seats)
+
+
+ticket = TicketBooking()
+
+while True:
+    print("\n1.Book Ticket\n2.Cancel Ticket\n3.Check Seats\n4.Exit")
+    choice = input("Enter choice: ")
+
+    if choice == "1":
+        ticket.book_ticket()
+    elif choice == "2":
+        ticket.cancel_ticket()
+    elif choice == "3":
+        ticket.available_seats()
+    elif choice == "4":
+        break
+    else:
+        print("Invalid choice.")
